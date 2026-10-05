@@ -5,11 +5,16 @@ import {
   SlidersHorizontal, 
   X, 
   Sparkles,
-  ChevronDown
+  ChevronDown,
+  Flame,
+  Tag
 } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 import { ProductCategory, Product } from '../types';
 import { ProductCard } from './ProductCard';
+import { DealsSection } from './DealsSection';
+import { DealCard } from './DealCard';
+import { db } from '../services/dbStore';
 
 export const ShopView: React.FC = () => {
   const { 
@@ -18,13 +23,16 @@ export const ShopView: React.FC = () => {
     selectedCategory, 
     setSelectedCategory,
     searchQuery,
-    setSearchQuery 
+    setSearchQuery,
+    setCurrentView
   } = useShop();
 
   const [sortBy, setSortBy] = useState<'featured' | 'price-low' | 'price-high' | 'best-selling' | 'rating' | 'newest'>('featured');
   const [inStockOnly, setInStockOnly] = useState(false);
   const [maxPrice, setMaxPrice] = useState(2500);
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
+
+  const allDeals = db.getDeals();
 
   // Filter & sort logic
   const filteredProducts = useMemo(() => {
@@ -68,17 +76,28 @@ export const ShopView: React.FC = () => {
   }, [products, selectedCategory, inStockOnly, maxPrice, searchQuery, sortBy]);
 
   return (
-    <div className="py-10 bg-surface-cream min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-8 bg-surface-cream min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         
-        {/* Page Title & Breadcrumb */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        {/* FIRST SHOW DEALS (As requested: "same as show in All products pages first show deals") */}
+        <div className="rounded-3xl overflow-hidden shadow-xs border border-brand-main">
+          <DealsSection 
+            title="Featured Mega Deals"
+            subtitle="Save up to Rs. 701 on our curated combo bundles. Free delivery on orders above Rs. 2,500!"
+            limit={4}
+            showViewAllButton={true}
+            onViewAllClick={() => setCurrentView('deals')}
+          />
+        </div>
+
+        {/* Page Title & Controls */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between pt-4 gap-4 border-t border-brand-main">
           <div>
             <div className="text-xs font-bold uppercase tracking-wider text-brand-leaf">
-              Frozen Fresh Pantry
+              Full Frozen Pantry
             </div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-brand-dark font-display">
-              All Products ({filteredProducts.length})
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-brand-dark font-display">
+              Individual Products ({filteredProducts.length})
             </h1>
           </div>
 
@@ -126,7 +145,7 @@ export const ShopView: React.FC = () => {
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Shami, nuggets, kebab..."
+                  placeholder="Shami, wings, seekh, nuggets..."
                   className="w-full pl-8 pr-3 py-2 text-xs rounded-xl border border-brand-main bg-surface-cream text-brand-dark"
                 />
                 <Search className="w-3.5 h-3.5 text-brand-muted absolute left-2.5 top-2.5" />
@@ -139,6 +158,23 @@ export const ShopView: React.FC = () => {
                   </button>
                 )}
               </div>
+            </div>
+
+            {/* Deals Quick Switcher */}
+            <div className="p-3.5 rounded-2xl bg-amber-50 border border-amber-200 space-y-2">
+              <div className="flex items-center gap-1.5 text-xs font-bold text-amber-900">
+                <Flame className="w-4 h-4 text-amber-600 fill-current" />
+                <span>Save with Mega Deals</span>
+              </div>
+              <p className="text-[11px] text-amber-800 leading-snug">
+                Browse our 8 discounted multi-pack bundles saving up to Rs. 701.
+              </p>
+              <button
+                onClick={() => setCurrentView('deals')}
+                className="w-full py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-[11px] font-bold transition-colors cursor-pointer"
+              >
+                View 8 Mega Deals
+              </button>
             </div>
 
             {/* Categories filter */}
@@ -183,11 +219,11 @@ export const ShopView: React.FC = () => {
             <div className="space-y-2 pt-2 border-t border-brand-main">
               <div className="flex items-center justify-between text-xs">
                 <span className="font-bold text-brand-dark uppercase tracking-wider">Max Price</span>
-                <span className="font-bold text-brand-primary tabular-nums">PKR {maxPrice.toLocaleString()}</span>
+                <span className="font-bold text-brand-primary tabular-nums">Rs. {maxPrice.toLocaleString()}</span>
               </div>
               <input
                 type="range"
-                min="500"
+                min="900"
                 max="2500"
                 step="50"
                 value={maxPrice}
@@ -195,8 +231,8 @@ export const ShopView: React.FC = () => {
                 className="w-full accent-brand-primary cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-brand-muted tabular-nums">
-                <span>PKR 500</span>
-                <span>PKR 2,500</span>
+                <span>Rs. 900</span>
+                <span>Rs. 2,500</span>
               </div>
             </div>
 
@@ -257,7 +293,7 @@ export const ShopView: React.FC = () => {
                 </div>
                 <h3 className="text-base font-bold text-brand-dark">No Products Found</h3>
                 <p className="text-xs text-brand-muted max-w-sm mx-auto">
-                  Try adjusting your filters, price range, or searching for other delicious items like "shami", "nuggets", or "kebab".
+                  Try adjusting your filters, price range, or searching for other items like "shami", "nuggets", "wings" or "seekh".
                 </p>
                 <button
                   onClick={() => {
@@ -296,7 +332,7 @@ export const ShopView: React.FC = () => {
             <div className="w-screen max-w-xs bg-white p-6 shadow-2xl space-y-6 overflow-y-auto">
               <div className="flex items-center justify-between pb-3 border-b border-brand-main">
                 <h3 className="text-base font-bold text-brand-dark">Filter Products</h3>
-                <button onClick={() => setMobileFilterOpen(false)} className="text-brand-muted">
+                <button onClick={() => setMobileFilterOpen(false)} className="text-brand-muted cursor-pointer">
                   <X className="w-5 h-5" />
                 </button>
               </div>
@@ -307,7 +343,7 @@ export const ShopView: React.FC = () => {
                 <div className="space-y-1 text-xs">
                   <button
                     onClick={() => { setSelectedCategory('all'); setMobileFilterOpen(false); }}
-                    className={`w-full text-left px-3 py-2 rounded-lg ${selectedCategory === 'all' ? 'bg-brand-primary text-white font-bold' : 'text-brand-dark'}`}
+                    className={`w-full text-left px-3 py-2 rounded-lg cursor-pointer ${selectedCategory === 'all' ? 'bg-brand-primary text-white font-bold' : 'text-brand-dark'}`}
                   >
                     All Products
                   </button>
@@ -315,7 +351,7 @@ export const ShopView: React.FC = () => {
                     <button
                       key={c.id}
                       onClick={() => { setSelectedCategory(c.id); setMobileFilterOpen(false); }}
-                      className={`w-full text-left px-3 py-2 rounded-lg ${selectedCategory === c.id ? 'bg-brand-primary text-white font-bold' : 'text-brand-dark'}`}
+                      className={`w-full text-left px-3 py-2 rounded-lg cursor-pointer ${selectedCategory === c.id ? 'bg-brand-primary text-white font-bold' : 'text-brand-dark'}`}
                     >
                       {c.name}
                     </button>
@@ -327,21 +363,21 @@ export const ShopView: React.FC = () => {
               <div className="space-y-2">
                 <div className="flex justify-between text-xs font-bold text-brand-dark">
                   <span>Max Price:</span>
-                  <span className="text-brand-primary">PKR {maxPrice}</span>
+                  <span className="text-brand-primary">Rs. {maxPrice}</span>
                 </div>
                 <input
                   type="range"
-                  min="500"
+                  min="900"
                   max="2500"
                   value={maxPrice}
                   onChange={(e) => setMaxPrice(Number(e.target.value))}
-                  className="w-full accent-brand-primary"
+                  className="w-full accent-brand-primary cursor-pointer"
                 />
               </div>
 
               <button
                 onClick={() => setMobileFilterOpen(false)}
-                className="w-full py-3 rounded-xl bg-brand-primary text-white font-bold text-xs"
+                className="w-full py-3 rounded-xl bg-brand-primary text-white font-bold text-xs cursor-pointer"
               >
                 Apply Filters
               </button>

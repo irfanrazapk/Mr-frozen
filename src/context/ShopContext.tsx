@@ -14,6 +14,7 @@ export interface ToastMessage {
 export type AppView = 
   | 'home' 
   | 'shop' 
+  | 'deals'
   | 'product-details' 
   | 'categories' 
   | 'cart' 

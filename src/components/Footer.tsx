@@ -110,15 +110,23 @@ export const Footer: React.FC = () => {
           {/* Col 3: Shop Categories */}
           <div className="space-y-3">
             <h5 className="text-sm font-bold tracking-wide uppercase text-brand-light font-display">
-              Categories
+              Categories & Deals
             </h5>
             <ul className="space-y-2 text-sm text-white/80">
+              <li>
+                <button
+                  onClick={() => setCurrentView('deals')}
+                  className="text-amber-300 font-extrabold hover:text-white transition-colors text-left flex items-center gap-1.5"
+                >
+                  <span>🔥 Mega Deals (Save up to Rs. 701)</span>
+                </button>
+              </li>
               <li>
                 <button
                   onClick={() => { setSelectedCategory('kebabs'); setCurrentView('shop'); }}
                   className="hover:text-brand-light transition-colors text-left"
                 >
-                  Shami & Seekh Kebabs
+                  Kababs Range (Shami & Seekh)
                 </button>
               </li>
               <li>

@@ -573,7 +573,7 @@ const ShopProvider = ({ children })=>{
         children: children
     }, void 0, false, {
         fileName: "[project]/src/context/ShopContext.tsx",
-        lineNumber: 218,
+        lineNumber: 219,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -593,6 +593,8 @@ __turbopack_context__.s([
     ()=>INITIAL_CATEGORIES,
     "INITIAL_COUPONS",
     ()=>INITIAL_COUPONS,
+    "INITIAL_DEALS",
+    ()=>INITIAL_DEALS,
     "INITIAL_PRODUCTS",
     ()=>INITIAL_PRODUCTS,
     "INITIAL_REVIEWS",
@@ -605,444 +607,1192 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$t
 const INITIAL_CATEGORIES = [
     {
         id: 'kebabs',
-        name: 'Shami & Seekh Kebabs',
-        tagline: 'Authentic aromatic hand-crafted kebabs',
-        itemCount: 4,
+        name: 'Kababs Range',
+        tagline: 'Shami, Seekh, Chapli & Galawati Kababs',
+        itemCount: 5,
         image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenShamiKebab
     },
     {
         id: 'nuggets',
         name: 'Chicken Nuggets',
-        tagline: 'Golden crispy tempura & panko coated',
-        itemCount: 3,
+        tagline: '1000g Family Pack (43~45 Pcs)',
+        itemCount: 1,
         image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenNuggets
     },
     {
         id: 'tender-pops',
-        name: 'Tender Pops & Bites',
-        tagline: 'Crunchy bite-sized 100% chicken breast',
+        name: 'Tender Pops & Hot Tenders',
+        tagline: 'Crispy crunchy pure chicken fillets',
         itemCount: 2,
         image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenTenderPops
     },
     {
-        id: 'ready-to-cook',
-        name: 'Ready To Cook',
-        tagline: 'Convenient freezer-to-pan in minutes',
-        itemCount: 5,
-        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenSeekhKebab
+        id: 'wings-bites',
+        name: 'Wings & Fire Bolts',
+        tagline: 'Big Bird Wings & spicy Fire Bolts',
+        itemCount: 2,
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenNuggets
     },
     {
-        id: 'parathas',
-        name: 'Crispy Parathas',
-        tagline: 'Flaky layered whole wheat & plain parathas',
-        itemCount: 2,
+        id: 'pizza-toppings',
+        name: 'Pizza & Toppings',
+        tagline: 'Tikka, Fajita Toppings & Quiche Pizza',
+        itemCount: 3,
         image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].heroBanner
     },
     {
-        id: 'family-packs',
-        name: 'Family Saver Packs',
-        tagline: 'Economy value bundles for the entire household',
-        itemCount: 3,
-        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenShamiKebab
+        id: 'patties-boti',
+        name: 'Patties & Malai Boti',
+        tagline: 'Juicy Burger Patties & tender Malai Boti',
+        itemCount: 2,
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenSeekhKebab
     }
 ];
 const INITIAL_PRODUCTS = [
     {
-        id: 'prod-shami-chicken-01',
-        slug: 'chicken-shami-kebab',
-        sku: 'MF-CSK-750',
-        name: 'Premium Chicken Shami Kebab',
-        tagline: 'Tender chicken filaments blended with aromatic spices and chana daal',
-        category: 'kebabs',
-        categoryName: 'Shami & Seekh Kebabs',
-        description: 'Mr. Frozen Chicken Shami Kebabs are crafted following traditional slow-cooked recipes. Made with 100% prime chicken breast, aromatic whole spices, lentils, and fresh herbs. Pan-fry directly from frozen for a succulent, melt-in-the-mouth texture perfect for tea-time or hearty burger buns.',
-        shortDescription: '100% Natural Chicken, Chana Daal & Traditional Spices (18-20 pcs)',
-        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenShamiKebab,
-        galleryImages: [
-            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenShamiKebab,
-            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].heroBanner
-        ],
-        price: 990,
-        salePrice: 850,
-        discountPercentage: 14,
-        weightGrams: 750,
-        weightLabel: '750g • 18-20 Pcs',
-        piecesCount: 20,
-        stockQuantity: 45,
-        lowStockThreshold: 10,
-        isFeatured: true,
-        isBestSeller: true,
-        isNewArrival: false,
-        rating: 4.9,
-        reviewCount: 38,
-        ingredients: [
-            'Prime Boneless Chicken (65%)',
-            'Split Bengal Gram (Chana Daal)',
-            'Fresh Ginger & Garlic Paste',
-            'Green Coriander & Mint Leaves',
-            'Whole Cumin, Black Pepper, Cinnamon, Cardamom',
-            'Pure Himalayan Pink Salt'
-        ],
-        nutritionalInfo: {
-            servingSize: '1 Kebab (38g)',
-            calories: 78,
-            proteinG: 7.2,
-            totalFatG: 2.8,
-            carbsG: 6.0,
-            sodiumMg: 190
-        },
-        cookingMethods: [
-            {
-                method: 'Pan Fry',
-                time: '4-6 minutes',
-                instructions: 'Heat 2 tablespoons of oil in a non-stick pan over medium heat. Place frozen kebabs directly and fry 2-3 minutes per side until golden brown.'
-            },
-            {
-                method: 'Air Fry',
-                time: '8 minutes',
-                temperature: '180°C (350°F)',
-                instructions: 'Lightly brush or spray with oil and air fry at 180°C for 8 minutes, flipping halfway.'
-            }
-        ],
-        storageInstructions: 'Keep frozen at -18°C or below. Do not refreeze once thawed.',
-        tags: [
-            'chicken',
-            'shami',
-            'kebab',
-            'halal',
-            'high-protein',
-            'no-preservatives'
-        ],
-        seoTitle: 'Buy Premium Chicken Shami Kebab Online | Mr. Frozen Pakistan',
-        seoDescription: 'Order traditional melt-in-mouth Chicken Shami Kebabs made with 100% pure chicken and lentils. Frozen fresh with zero artificial preservatives.',
-        createdAt: '2026-01-15T00:00:00Z'
-    },
-    {
-        id: 'prod-seekh-chicken-02',
-        slug: 'chicken-seekh-kebab',
-        sku: 'MF-SEEKH-600',
-        name: 'Smoky Chicken Seekh Kebab',
-        tagline: 'Flame-kissed minced chicken skewered with fresh herbs and crushed coriander',
-        category: 'kebabs',
-        categoryName: 'Shami & Seekh Kebabs',
-        description: 'Juicy, delicately spiced minced chicken skewers infused with subtle charcoal smoke aroma, green chilies, and hand-ground spices. Ready in just 5 minutes on a grill pan or oven, serving restaurant-quality seekh kebabs in the comfort of your home.',
-        shortDescription: 'Smoked Minced Chicken with Green Herbs & Spices (12 pcs)',
-        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenSeekhKebab,
-        galleryImages: [
-            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenSeekhKebab,
-            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].heroBanner
-        ],
-        price: 1150,
-        salePrice: 990,
-        discountPercentage: 14,
-        weightGrams: 600,
-        weightLabel: '600g • 12 Skewers',
-        piecesCount: 12,
-        stockQuantity: 32,
-        lowStockThreshold: 8,
-        isFeatured: true,
-        isBestSeller: true,
-        isNewArrival: false,
-        rating: 4.8,
-        reviewCount: 29,
-        ingredients: [
-            'Minced Chicken Breast & Thigh (78%)',
-            'Fresh Onion, Ginger, Garlic',
-            'Green Chilies, Fresh Mint & Cilantro',
-            'Traditional Seekh Masala Blend',
-            'Sea Salt, Lemon Juice'
-        ],
-        nutritionalInfo: {
-            servingSize: '1 Seekh Kebab (50g)',
-            calories: 95,
-            proteinG: 10.5,
-            totalFatG: 4.5,
-            carbsG: 2.1,
-            sodiumMg: 210
-        },
-        cookingMethods: [
-            {
-                method: 'Pan Fry',
-                time: '5-7 minutes',
-                instructions: 'Brush a grill pan with light oil. Cook frozen kebabs turning frequently until evenly charred and heated through.'
-            },
-            {
-                method: 'Air Fry',
-                time: '7-9 minutes',
-                temperature: '190°C',
-                instructions: 'Cook at 190°C in a single layer for 7-9 minutes until sizzling.'
-            }
-        ],
-        storageInstructions: 'Keep frozen at -18°C or below.',
-        tags: [
-            'chicken',
-            'seekh',
-            'bbq',
-            'halal',
-            'grill',
-            'ready-to-cook'
-        ],
-        seoTitle: 'Smoky Chicken Seekh Kebab - Ready to Cook | Mr. Frozen',
-        seoDescription: 'Authentic Pakistani chicken seekh kebabs prepared with fresh minced chicken and spices. Frozen fresh for pure convenience.',
-        createdAt: '2026-01-20T00:00:00Z'
-    },
-    {
-        id: 'prod-nuggets-chicken-03',
-        slug: 'crispy-chicken-nuggets',
-        sku: 'MF-NUG-800',
-        name: 'Crispy Chicken Nuggets',
-        tagline: 'Extra crunchy golden panko crust with succulent white meat chicken inside',
+        id: 'prod-01',
+        slug: 'chicken-nuggets-1000g',
+        sku: 'MF-NUG-1000',
+        name: 'Chicken Nuggets',
+        tagline: 'Crispy golden tempura breadcrumbs with succulent chicken breast meat',
         category: 'nuggets',
         categoryName: 'Chicken Nuggets',
-        description: 'The ultimate family favorite. Mr. Frozen Crispy Chicken Nuggets are made exclusively from tender chicken breast meat, gently seasoned and double-coated in crunchy breadcrumbs for that irresistible snap. Free of MSG, artificial colors, and fillers.',
-        shortDescription: '100% Breast Meat in Crispy Golden Panko Breadcrumbs (32-35 pcs)',
+        description: 'Mr. Frozen Chicken Nuggets made from 100% prime breast cuts. Crispy on the outside, tender and juicy on the inside.',
+        shortDescription: 'Net Wt. 1000g | 43~45 Pieces',
         image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenNuggets,
         galleryImages: [
             __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenNuggets,
             __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].heroBanner
         ],
-        price: 1350,
-        salePrice: 1190,
-        discountPercentage: 12,
-        weightGrams: 800,
-        weightLabel: '800g • 32-35 Pcs',
-        piecesCount: 35,
-        stockQuantity: 60,
-        lowStockThreshold: 15,
+        price: 1300,
+        weightGrams: 1000,
+        weightLabel: 'Net Wt. 1000g | 43~45 Pieces',
+        piecesCount: 45,
+        stockQuantity: 65,
+        lowStockThreshold: 10,
         isFeatured: true,
         isBestSeller: true,
         isNewArrival: false,
         rating: 4.9,
-        reviewCount: 54,
+        reviewCount: 48,
         ingredients: [
-            'Boneless Chicken Breast (70%)',
-            'Wheat Flour, Panko Breadcrumbs',
-            'White Pepper, Garlic Powder, Onion Powder',
-            'Pure Vegetable Oil, Salt'
+            'Boneless Chicken Breast (72%)',
+            'Wheat Flour',
+            'Panko Crumbs',
+            'Spices',
+            'Pure Salt'
         ],
         nutritionalInfo: {
             servingSize: '4 Nuggets (80g)',
-            calories: 165,
-            proteinG: 14.0,
-            totalFatG: 7.2,
-            carbsG: 11.5,
+            calories: 170,
+            proteinG: 14.5,
+            totalFatG: 7.0,
+            carbsG: 11.0,
             sodiumMg: 280
         },
         cookingMethods: [
             {
                 method: 'Deep Fry',
-                time: '3-4 minutes',
-                temperature: '180°C (350°F)',
-                instructions: 'Preheat oil to 180°C. Deep fry frozen nuggets for 3-4 minutes until crispy golden.'
+                time: '3-4 mins',
+                instructions: 'Fry from frozen in hot oil (180°C) until golden brown.'
             },
             {
                 method: 'Air Fry',
-                time: '8-10 minutes',
-                temperature: '200°C (400°F)',
-                instructions: 'Air fry in a single layer at 200°C for 8-10 minutes, shaking basket at 5 minutes.'
-            },
-            {
-                method: 'Bake',
-                time: '12-15 minutes',
-                temperature: '210°C',
-                instructions: 'Bake on a lightly greased baking sheet until crispy and heated to center.'
+                time: '8-10 mins',
+                temperature: '200°C',
+                instructions: 'Cook in single layer, shaking halfway.'
             }
         ],
-        storageInstructions: 'Keep frozen at -18°C. Do not refreeze.',
+        storageInstructions: 'Keep frozen at -18°C or below.',
         tags: [
-            'chicken-nuggets',
-            'kids-favorite',
-            'crispy',
-            'snack',
+            'chicken',
+            'nuggets',
+            'kids',
             'halal'
         ],
-        seoTitle: 'Crispy Chicken Nuggets 800g Family Pack | Mr. Frozen',
-        seoDescription: 'Crispy golden chicken nuggets made from 100% real chicken breast. Fast home delivery across Karachi, Lahore, Islamabad.',
+        seoTitle: 'Buy Chicken Nuggets 1000g (43~45 Pieces) | Mr. Frozen',
+        seoDescription: 'Crispy Chicken Nuggets 1000g family pack. Order online for Rs. 1,300 across Karachi, Lahore & Islamabad.',
         createdAt: '2026-01-10T00:00:00Z'
     },
     {
-        id: 'prod-tender-pops-04',
-        slug: 'crispy-tender-pops',
-        sku: 'MF-POP-650',
-        name: 'Spicy Chicken Tender Pops',
-        tagline: 'Crunchy bite-sized chicken pops tossed in subtle peri-peri and garlic spice',
-        category: 'tender-pops',
-        categoryName: 'Tender Pops & Bites',
-        description: 'Irresistible, bite-sized chicken tender pops made with whole chicken breast chunks, flash-frozen at peak freshness with a flaky spiced coating. The perfect companion for movie nights, school lunches, or snack platters.',
-        shortDescription: 'Bite-Sized Golden Chicken Poppers with Zesty Crunch (650g)',
-        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenTenderPops,
-        galleryImages: [
-            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenTenderPops,
-            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenNuggets
-        ],
-        price: 1080,
-        salePrice: 940,
-        discountPercentage: 13,
-        weightGrams: 650,
-        weightLabel: '650g • Approx 40-45 Pops',
-        piecesCount: 42,
-        stockQuantity: 40,
-        lowStockThreshold: 12,
-        isFeatured: true,
-        isBestSeller: false,
-        isNewArrival: true,
-        rating: 4.7,
-        reviewCount: 22,
-        ingredients: [
-            'Chicken Breast Fillet Chunks (72%)',
-            'Cornstarch & Crispy Flour Coating',
-            'Paprika, Garlic, Onion & Black Pepper',
-            'Natural Sea Salt, Spices'
-        ],
-        nutritionalInfo: {
-            servingSize: '6 Pops (75g)',
-            calories: 152,
-            proteinG: 13.2,
-            totalFatG: 6.8,
-            carbsG: 9.4,
-            sodiumMg: 260
-        },
-        cookingMethods: [
-            {
-                method: 'Air Fry',
-                time: '7-9 minutes',
-                temperature: '195°C',
-                instructions: 'Spread evenly in air fryer basket. Cook at 195°C for 7-9 minutes shaking once.'
-            },
-            {
-                method: 'Deep Fry',
-                time: '3 minutes',
-                instructions: 'Fry in hot oil for 3 minutes until bubbling golden.'
-            }
-        ],
-        storageInstructions: 'Keep frozen below -18°C.',
-        tags: [
-            'chicken-pops',
-            'popcorn-chicken',
-            'spicy',
-            'snack',
-            'finger-food'
-        ],
-        seoTitle: 'Spicy Chicken Tender Pops 650g | Mr. Frozen Online Store',
-        seoDescription: 'Delicious crispy chicken tender poppers made from 100% prime chicken breast. Great for school lunches and snacking.',
-        createdAt: '2026-02-01T00:00:00Z'
-    },
-    {
-        id: 'prod-beef-shami-05',
-        slug: 'beef-shami-kebab',
-        sku: 'MF-BSK-750',
-        name: 'Traditional Beef Shami Kebab',
-        tagline: 'Rich slow-braised lean beef with hand-ground spices and lentils',
+        id: 'prod-02',
+        slug: 'chicken-shami-kabab-648g',
+        sku: 'MF-CSK-648',
+        name: 'Chicken Shami Kabab',
+        tagline: 'Traditional recipe with shredded chicken, chana daal, and roasted garam masala',
         category: 'kebabs',
-        categoryName: 'Shami & Seekh Kebabs',
-        description: 'Made for true connoisseurs of authentic Pakistani taste. Tender hand-shredded beef simmered with lentils, cinnamon, cloves, cumin, and fragrant herbs until completely infused, then gently shaped and blast-frozen to lock in savory aroma.',
-        shortDescription: 'Slow-Simmered Lean Beef & Whole Spices (18 pcs)',
+        categoryName: 'Kababs Range',
+        description: 'Authentic home-style Chicken Shami Kababs made with lentils, whole spices, and coriander. Delicious in burgers or with paratha.',
+        shortDescription: 'Net Wt. 648g | 18 Pieces',
         image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenShamiKebab,
         galleryImages: [
             __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenShamiKebab,
             __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].heroBanner
         ],
-        price: 1250,
-        salePrice: 1100,
-        discountPercentage: 12,
-        weightGrams: 750,
-        weightLabel: '750g • 18 Pcs',
+        price: 1100,
+        weightGrams: 648,
+        weightLabel: 'Net Wt. 648g | 18 Pieces',
         piecesCount: 18,
-        stockQuantity: 28,
-        lowStockThreshold: 6,
-        isFeatured: false,
+        stockQuantity: 50,
+        lowStockThreshold: 10,
+        isFeatured: true,
         isBestSeller: true,
         isNewArrival: false,
         rating: 4.9,
-        reviewCount: 31,
+        reviewCount: 56,
         ingredients: [
-            'Prime Boneless Lean Beef (65%)',
-            'Daal Chana',
-            'Whole Garam Masala, Ginger, Garlic',
-            'Fresh Coriander, Green Chilies, Himalayan Salt'
+            'Prime Chicken Breast',
+            'Chana Daal',
+            'Ginger Garlic',
+            'Whole Spices',
+            'Mint & Coriander'
         ],
         nutritionalInfo: {
-            servingSize: '1 Kebab (42g)',
-            calories: 88,
-            proteinG: 8.5,
-            totalFatG: 3.4,
+            servingSize: '1 Kabab (36g)',
+            calories: 75,
+            proteinG: 7.0,
+            totalFatG: 2.5,
             carbsG: 5.5,
-            sodiumMg: 205
+            sodiumMg: 180
         },
         cookingMethods: [
             {
                 method: 'Pan Fry',
-                time: '5-6 minutes',
-                instructions: 'Pan-fry in a shallow skillet with hot oil on medium heat until rich golden-brown.'
+                time: '4-5 mins',
+                instructions: 'Pan-fry in a shallow skillet with a little oil until golden.'
+            },
+            {
+                method: 'Air Fry',
+                time: '7 mins',
+                temperature: '185°C',
+                instructions: 'Lightly brush oil and air fry.'
+            }
+        ],
+        storageInstructions: 'Keep frozen at -18°C.',
+        tags: [
+            'shami',
+            'chicken',
+            'traditional',
+            'halal'
+        ],
+        seoTitle: 'Chicken Shami Kabab 648g (18 Pieces) | Mr. Frozen',
+        seoDescription: 'Authentic Chicken Shami Kabab Rs. 1,100 for 18 pieces. Pure homemade taste frozen fresh.',
+        createdAt: '2026-01-12T00:00:00Z'
+    },
+    {
+        id: 'prod-03',
+        slug: 'beef-shami-kabab-648g',
+        sku: 'MF-BSK-648',
+        name: 'Beef Shami Kabab',
+        tagline: 'Slow-simmered lean beef tenderly blended with aromatic spices and lentils',
+        category: 'kebabs',
+        categoryName: 'Kababs Range',
+        description: 'Made for true meat lovers. High-protein lean beef simmered with lentils, herbs, and whole spices.',
+        shortDescription: 'Net Wt. 648g | 18 Pieces',
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenShamiKebab,
+        galleryImages: [
+            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenShamiKebab
+        ],
+        price: 1300,
+        weightGrams: 648,
+        weightLabel: 'Net Wt. 648g | 18 Pieces',
+        piecesCount: 18,
+        stockQuantity: 42,
+        lowStockThreshold: 8,
+        isFeatured: true,
+        isBestSeller: true,
+        isNewArrival: false,
+        rating: 4.8,
+        reviewCount: 39,
+        ingredients: [
+            'Lean Beef (65%)',
+            'Daal Chana',
+            'Fresh Herbs',
+            'Whole Spices',
+            'Himalayan Salt'
+        ],
+        nutritionalInfo: {
+            servingSize: '1 Kabab (36g)',
+            calories: 82,
+            proteinG: 8.2,
+            totalFatG: 3.1,
+            carbsG: 5.0,
+            sodiumMg: 195
+        },
+        cookingMethods: [
+            {
+                method: 'Pan Fry',
+                time: '4-6 mins',
+                instructions: 'Fry in hot skillet with light oil until crust is crisp.'
             }
         ],
         storageInstructions: 'Keep frozen at -18°C.',
         tags: [
             'beef',
             'shami',
-            'kebab',
-            'traditional',
+            'kabab',
             'halal'
         ],
-        seoTitle: 'Authentic Beef Shami Kebab 750g | Mr. Frozen',
-        seoDescription: 'Rich and tender Beef Shami Kebabs made with 100% prime beef and authentic spices. Order online with quick frozen delivery.',
-        createdAt: '2026-01-18T00:00:00Z'
+        seoTitle: 'Beef Shami Kabab 648g (18 Pieces) | Mr. Frozen',
+        seoDescription: 'Rich and hearty Beef Shami Kababs for Rs. 1,300. 18 pieces.',
+        createdAt: '2026-01-15T00:00:00Z'
     },
     {
-        id: 'prod-plain-paratha-06',
-        slug: 'flaky-plain-paratha',
-        sku: 'MF-PAR-1000',
-        name: 'Crispy Layered Plain Parathas',
-        tagline: 'Multi-layered, flaky golden parathas made with premium wheat and pure ghee notes',
-        category: 'parathas',
-        categoryName: 'Crispy Parathas',
-        description: 'Enjoy the true aroma of a dhaba-style layered paratha in just 3 minutes! No thawing required—straight from the freezer onto your hot tawa pan. Delicately rolled to achieve distinct flaky, crispy layers.',
-        shortDescription: 'Multi-Layered Golden Crispy Tawa Parathas (10 pcs)',
+        id: 'prod-04',
+        slug: 'chicken-chapli-kabab-900g',
+        sku: 'MF-CCK-900',
+        name: 'Chicken Chapli Kabab',
+        tagline: 'Peshawari style spiced minced chicken with crushed pomegranate, coriander & tomato notes',
+        category: 'kebabs',
+        categoryName: 'Kababs Range',
+        description: 'Hand-crafted traditional Pashtun delicacy packed with crushed coriander seeds, anardana, and fragrant seasonings.',
+        shortDescription: 'Net Wt. 900g | 12 Pieces',
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenSeekhKebab,
+        galleryImages: [
+            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenSeekhKebab
+        ],
+        price: 1300,
+        weightGrams: 900,
+        weightLabel: 'Net Wt. 900g | 12 Pieces',
+        piecesCount: 12,
+        stockQuantity: 38,
+        lowStockThreshold: 8,
+        isFeatured: false,
+        isBestSeller: true,
+        isNewArrival: true,
+        rating: 4.9,
+        reviewCount: 31,
+        ingredients: [
+            'Chicken Mince (75%)',
+            'Pomegranate Seeds (Anardana)',
+            'Crushed Coriander',
+            'Onion & Green Chilies',
+            'Garam Masala'
+        ],
+        nutritionalInfo: {
+            servingSize: '1 Kabab (75g)',
+            calories: 135,
+            proteinG: 13.0,
+            totalFatG: 6.5,
+            carbsG: 4.0,
+            sodiumMg: 240
+        },
+        cookingMethods: [
+            {
+                method: 'Pan Fry',
+                time: '5-7 mins',
+                instructions: 'Fry on medium-high heat with shallow oil on flat tawa.'
+            }
+        ],
+        storageInstructions: 'Keep frozen at -18°C.',
+        tags: [
+            'chapli',
+            'peshawari',
+            'kabab',
+            'chicken'
+        ],
+        seoTitle: 'Chicken Chapli Kabab 900g (12 Pieces) | Mr. Frozen',
+        seoDescription: 'Authentic Chicken Chapli Kabab Rs. 1,300. 12 delicious pieces.',
+        createdAt: '2026-01-20T00:00:00Z'
+    },
+    {
+        id: 'prod-05',
+        slug: 'big-bird-wings-850g',
+        sku: 'MF-BBW-850',
+        name: 'Big Bird Wings',
+        tagline: 'Jumbo succulent chicken wings pre-marinated in savory garlic herb glaze',
+        category: 'wings-bites',
+        categoryName: 'Wings & Fire Bolts',
+        description: 'Plump, meaty jumbo chicken wings. Oven-bake or air-fry for restaurant-quality crispy wings in minutes.',
+        shortDescription: 'Net Wt. 850g',
         image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].heroBanner,
         galleryImages: [
             __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].heroBanner
         ],
-        price: 650,
-        salePrice: 550,
-        discountPercentage: 15,
-        weightGrams: 800,
-        weightLabel: '800g • 10 Parathas',
-        piecesCount: 10,
-        stockQuantity: 50,
-        lowStockThreshold: 15,
+        price: 1200,
+        weightGrams: 850,
+        weightLabel: 'Net Wt. 850g',
+        piecesCount: 12,
+        stockQuantity: 40,
+        lowStockThreshold: 10,
+        isFeatured: true,
+        isBestSeller: false,
+        isNewArrival: true,
+        rating: 4.8,
+        reviewCount: 27,
+        ingredients: [
+            'Prime Chicken Wings',
+            'Paprika, Garlic & Onion Powder',
+            'Black Pepper',
+            'Natural Seasoning'
+        ],
+        nutritionalInfo: {
+            servingSize: '2 Wings (100g)',
+            calories: 195,
+            proteinG: 16.5,
+            totalFatG: 12.0,
+            carbsG: 2.0,
+            sodiumMg: 310
+        },
+        cookingMethods: [
+            {
+                method: 'Air Fry',
+                time: '14-16 mins',
+                temperature: '190°C',
+                instructions: 'Air fry turning halfway until skin is blistered and crunchy.'
+            },
+            {
+                method: 'Bake',
+                time: '20-25 mins',
+                temperature: '200°C',
+                instructions: 'Bake on wire rack in preheated oven.'
+            }
+        ],
+        storageInstructions: 'Keep frozen at -18°C.',
+        tags: [
+            'wings',
+            'chicken',
+            'bbq',
+            'snack'
+        ],
+        seoTitle: 'Big Bird Wings 850g | Mr. Frozen',
+        seoDescription: 'Juicy Big Bird Wings 850g for Rs. 1,200. Perfect game day appetizer.',
+        createdAt: '2026-01-22T00:00:00Z'
+    },
+    {
+        id: 'prod-06',
+        slug: 'fire-bolts-780g',
+        sku: 'MF-FB-780',
+        name: 'Fire Bolts',
+        tagline: 'Fiery spiced crispy chicken poppers loaded with bold red chili & herb zest',
+        category: 'wings-bites',
+        categoryName: 'Wings & Fire Bolts',
+        description: 'Crunchy golden chicken bites with a fiery spicy punch. Perfect snack for movie nights and game days.',
+        shortDescription: 'Net Wt. 780g',
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenTenderPops,
+        galleryImages: [
+            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenTenderPops
+        ],
+        price: 1300,
+        weightGrams: 780,
+        weightLabel: 'Net Wt. 780g',
+        piecesCount: 40,
+        stockQuantity: 36,
+        lowStockThreshold: 8,
         isFeatured: false,
+        isBestSeller: true,
+        isNewArrival: true,
+        rating: 4.7,
+        reviewCount: 23,
+        ingredients: [
+            'Chicken Breast Chunks',
+            'Red Chili Flakes, Peri Peri Spices',
+            'Crispy Batter Coating',
+            'Sea Salt'
+        ],
+        nutritionalInfo: {
+            servingSize: '6 Bites (80g)',
+            calories: 165,
+            proteinG: 14.0,
+            totalFatG: 7.2,
+            carbsG: 9.5,
+            sodiumMg: 290
+        },
+        cookingMethods: [
+            {
+                method: 'Deep Fry',
+                time: '3-4 mins',
+                instructions: 'Fry from frozen in hot oil.'
+            },
+            {
+                method: 'Air Fry',
+                time: '8-10 mins',
+                temperature: '195°C',
+                instructions: 'Shake basket halfway through.'
+            }
+        ],
+        storageInstructions: 'Keep frozen at -18°C.',
+        tags: [
+            'spicy',
+            'fire-bolts',
+            'chicken',
+            'snack'
+        ],
+        seoTitle: 'Fire Bolts 780g | Mr. Frozen',
+        seoDescription: 'Spicy crunchy Fire Bolts 780g for Rs. 1,300.',
+        createdAt: '2026-01-25T00:00:00Z'
+    },
+    {
+        id: 'prod-07',
+        slug: 'hot-tender-780g',
+        sku: 'MF-HT-780',
+        name: 'Hot Tender',
+        tagline: 'Whole muscle chicken tenderloin strips coated in spicy southern-style breading',
+        category: 'tender-pops',
+        categoryName: 'Tender Pops & Hot Tenders',
+        description: 'Juicy whole chicken breast strips with a zesty, seasoned crust. Ready to dip in garlic mayo or honey mustard.',
+        shortDescription: 'Net Wt. 780g | 16~19 Pieces',
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenTenderPops,
+        galleryImages: [
+            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenTenderPops
+        ],
+        price: 1300,
+        weightGrams: 780,
+        weightLabel: 'Net Wt. 780g | 16~19 Pieces',
+        piecesCount: 18,
+        stockQuantity: 44,
+        lowStockThreshold: 10,
+        isFeatured: true,
+        isBestSeller: true,
+        isNewArrival: false,
+        rating: 4.9,
+        reviewCount: 41,
+        ingredients: [
+            'Chicken Tenderloin (74%)',
+            'Seasoned Wheat Flour Coating',
+            'Cayenne Pepper, Paprika',
+            'Salt & Spices'
+        ],
+        nutritionalInfo: {
+            servingSize: '2 Tenders (85g)',
+            calories: 172,
+            proteinG: 16.0,
+            totalFatG: 6.8,
+            carbsG: 9.0,
+            sodiumMg: 270
+        },
+        cookingMethods: [
+            {
+                method: 'Deep Fry',
+                time: '4-5 mins',
+                instructions: 'Deep fry in oil at 180°C until sizzling golden.'
+            },
+            {
+                method: 'Air Fry',
+                time: '10-12 mins',
+                temperature: '200°C',
+                instructions: 'Flip at 6 minutes.'
+            }
+        ],
+        storageInstructions: 'Keep frozen at -18°C.',
+        tags: [
+            'hot-tender',
+            'chicken-tenders',
+            'crispy'
+        ],
+        seoTitle: 'Hot Tender 780g (16~19 Pieces) | Mr. Frozen',
+        seoDescription: 'Hot Tenders 780g for Rs. 1,300. 16~19 whole chicken breast pieces.',
+        createdAt: '2026-01-18T00:00:00Z'
+    },
+    {
+        id: 'prod-08',
+        slug: 'chicken-seekh-kabab-1080g',
+        sku: 'MF-CSK-1080',
+        name: 'Chicken Seekh Kabab',
+        tagline: 'Jumbo family pack of flame-kissed succulent minced chicken seekh skewers',
+        category: 'kebabs',
+        categoryName: 'Kababs Range',
+        description: 'Massive value 1080g pack! Flame-kissed minced chicken infused with roasted cumin, green chilies, and subtle charcoal smoke.',
+        shortDescription: 'Net Wt. 1080g | 34~37 Pieces',
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenSeekhKebab,
+        galleryImages: [
+            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenSeekhKebab,
+            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].heroBanner
+        ],
+        price: 1100,
+        weightGrams: 1080,
+        weightLabel: 'Net Wt. 1080g | 34~37 Pieces',
+        piecesCount: 36,
+        stockQuantity: 55,
+        lowStockThreshold: 12,
+        isFeatured: true,
+        isBestSeller: true,
+        isNewArrival: false,
+        rating: 4.8,
+        reviewCount: 62,
+        ingredients: [
+            'Chicken Mince (78%)',
+            'Fresh Onion, Coriander, Mint',
+            'Seekh Kabab Spices',
+            'Pure Salt'
+        ],
+        nutritionalInfo: {
+            servingSize: '1 Seekh (30g)',
+            calories: 65,
+            proteinG: 6.8,
+            totalFatG: 3.2,
+            carbsG: 1.5,
+            sodiumMg: 160
+        },
+        cookingMethods: [
+            {
+                method: 'Pan Fry',
+                time: '4-6 mins',
+                instructions: 'Cook in lightly oiled grill pan or tawa.'
+            },
+            {
+                method: 'Air Fry',
+                time: '6-8 mins',
+                temperature: '190°C',
+                instructions: 'Air fry in single layer.'
+            }
+        ],
+        storageInstructions: 'Keep frozen at -18°C.',
+        tags: [
+            'seekh',
+            'kabab',
+            'chicken',
+            'bbq'
+        ],
+        seoTitle: 'Chicken Seekh Kabab 1080g (34~37 Pieces) | Mr. Frozen',
+        seoDescription: 'Chicken Seekh Kababs 1080g mega pack for Rs. 1,100 (34~37 pieces).',
+        createdAt: '2026-01-14T00:00:00Z'
+    },
+    {
+        id: 'prod-09',
+        slug: 'malai-boti-500g',
+        sku: 'MF-MB-500',
+        name: 'Malai Boti',
+        tagline: 'Melt-in-mouth chicken cubes marinated in creamy yogurt, fresh cream, white pepper & cardamom',
+        category: 'patties-boti',
+        categoryName: 'Patties & Malai Boti',
+        description: 'Tender chicken breast chunks marinated in rich fresh cream, mild spices, and lemon juice. Sizzling BBQ delicacy ready in 6 minutes.',
+        shortDescription: 'Net Wt. 500g',
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenSeekhKebab,
+        galleryImages: [
+            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenSeekhKebab
+        ],
+        price: 900,
+        weightGrams: 500,
+        weightLabel: 'Net Wt. 500g',
+        piecesCount: 16,
+        stockQuantity: 40,
+        lowStockThreshold: 8,
+        isFeatured: false,
+        isBestSeller: true,
+        isNewArrival: false,
+        rating: 4.9,
+        reviewCount: 35,
+        ingredients: [
+            'Boneless Chicken Breast Chunks',
+            'Fresh Cream & Dairy Yogurt',
+            'White Pepper, Cardamom, Garlic',
+            'Lemon Juice & Salt'
+        ],
+        nutritionalInfo: {
+            servingSize: '100g',
+            calories: 155,
+            proteinG: 19.0,
+            totalFatG: 6.5,
+            carbsG: 2.0,
+            sodiumMg: 210
+        },
+        cookingMethods: [
+            {
+                method: 'Pan Fry',
+                time: '6-8 mins',
+                instructions: 'Pan-fry on low-medium heat with butter.'
+            },
+            {
+                method: 'Air Fry',
+                time: '8-10 mins',
+                temperature: '185°C',
+                instructions: 'Cook until juicy and lightly charred.'
+            }
+        ],
+        storageInstructions: 'Keep frozen at -18°C.',
+        tags: [
+            'malai-boti',
+            'creamy',
+            'bbq',
+            'chicken'
+        ],
+        seoTitle: 'Malai Boti 500g | Mr. Frozen',
+        seoDescription: 'Creamy melt-in-mouth Malai Boti 500g for Rs. 900.',
+        createdAt: '2026-01-28T00:00:00Z'
+    },
+    {
+        id: 'prod-10',
+        slug: 'tender-pop-780g',
+        sku: 'MF-TP-780',
+        name: 'Tender Pop',
+        tagline: 'Popcorn-style bite-sized crunchy chicken breast poppers for quick snacking',
+        category: 'tender-pops',
+        categoryName: 'Tender Pops & Hot Tenders',
+        description: 'Irresistible, bite-sized chicken pops with a golden crunch. Excellent for children’s lunchboxes or evening tea.',
+        shortDescription: 'Net Wt. 780g | 54~60 Pieces',
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenTenderPops,
+        galleryImages: [
+            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenTenderPops
+        ],
+        price: 1100,
+        weightGrams: 780,
+        weightLabel: 'Net Wt. 780g | 54~60 Pieces',
+        piecesCount: 58,
+        stockQuantity: 52,
+        lowStockThreshold: 12,
+        isFeatured: true,
         isBestSeller: true,
         isNewArrival: false,
         rating: 4.8,
         reviewCount: 44,
         ingredients: [
-            'Wheat Flour, Water, Vegetable Shortening, Salt, Sugar'
+            'Chicken Breast Chunks (70%)',
+            'Crispy Coating & Breadcrumbs',
+            'Garlic, Onion, White Pepper',
+            'Himalayan Salt'
         ],
         nutritionalInfo: {
-            servingSize: '1 Paratha (80g)',
-            calories: 220,
-            proteinG: 4.8,
-            totalFatG: 9.0,
-            carbsG: 30.0,
-            sodiumMg: 220
+            servingSize: '8 Pops (75g)',
+            calories: 150,
+            proteinG: 13.0,
+            totalFatG: 6.5,
+            carbsG: 9.0,
+            sodiumMg: 250
+        },
+        cookingMethods: [
+            {
+                method: 'Deep Fry',
+                time: '3 mins',
+                instructions: 'Fry from frozen in hot oil.'
+            },
+            {
+                method: 'Air Fry',
+                time: '7-9 mins',
+                temperature: '195°C',
+                instructions: 'Air fry in single layer.'
+            }
+        ],
+        storageInstructions: 'Keep frozen at -18°C.',
+        tags: [
+            'tender-pop',
+            'popcorn-chicken',
+            'kids'
+        ],
+        seoTitle: 'Tender Pop 780g (54~60 Pieces) | Mr. Frozen',
+        seoDescription: 'Crunchy Tender Pop 780g for Rs. 1,100 (54~60 pieces).',
+        createdAt: '2026-01-16T00:00:00Z'
+    },
+    {
+        id: 'prod-11',
+        slug: 'burger-patty-850g',
+        sku: 'MF-BP-850',
+        name: 'Burger Patty',
+        tagline: 'Thick, seasoned restaurant-grade chicken burger patties for homemade burgers',
+        category: 'patties-boti',
+        categoryName: 'Patties & Malai Boti',
+        description: 'Juicy, seasoned chicken burger patties made to fit standard burger buns. Sizzle in a pan or grill for instant burger night.',
+        shortDescription: 'Net Wt. 850g | 9 Pieces',
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenShamiKebab,
+        galleryImages: [
+            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenShamiKebab
+        ],
+        price: 1300,
+        weightGrams: 850,
+        weightLabel: 'Net Wt. 850g | 9 Pieces',
+        piecesCount: 9,
+        stockQuantity: 45,
+        lowStockThreshold: 10,
+        isFeatured: false,
+        isBestSeller: true,
+        isNewArrival: false,
+        rating: 4.9,
+        reviewCount: 38,
+        ingredients: [
+            'Chicken Breast & Thigh Mince (75%)',
+            'Onion, Garlic, Black Pepper',
+            'Breadcrumbs & Egg White',
+            'Salt'
+        ],
+        nutritionalInfo: {
+            servingSize: '1 Patty (95g)',
+            calories: 175,
+            proteinG: 15.0,
+            totalFatG: 8.5,
+            carbsG: 7.0,
+            sodiumMg: 280
         },
         cookingMethods: [
             {
                 method: 'Pan Fry',
-                time: '2-3 minutes',
-                instructions: 'Preheat a tawa or pan. Place frozen paratha without adding oil. Cook for 1-2 minutes per side until puffed and golden brown.'
+                time: '5-6 mins',
+                instructions: 'Fry 2-3 mins per side in skillet with butter/oil.'
             }
         ],
-        storageInstructions: 'Store flat in freezer at -18°C.',
+        storageInstructions: 'Keep frozen at -18°C.',
         tags: [
-            'paratha',
-            'breakfast',
-            'flaky',
-            'ready-to-eat'
+            'burger-patty',
+            'chicken-burger',
+            'patty'
         ],
-        seoTitle: 'Crispy Layered Plain Paratha (10 Pcs) | Mr. Frozen',
-        seoDescription: 'Golden flaky parathas ready in 3 minutes on tawa. Wholesome family breakfast made easy.',
-        createdAt: '2026-01-05T00:00:00Z'
+        seoTitle: 'Burger Patty 850g (9 Pieces) | Mr. Frozen',
+        seoDescription: 'Thick juicy Chicken Burger Patty 850g for Rs. 1,300 (9 pieces).',
+        createdAt: '2026-01-24T00:00:00Z'
+    },
+    {
+        id: 'prod-12',
+        slug: 'quiche-pizza-600g',
+        sku: 'MF-QP-600',
+        name: 'Quiche Pizza',
+        tagline: 'Mini artisanal quiche pizzas loaded with savory chicken, mozzarella & herb crust',
+        category: 'pizza-toppings',
+        categoryName: 'Pizza & Toppings',
+        description: 'Delightful snack quiches loaded with diced chicken, bell peppers, melted mozzarella, and oregano in flaky pastry.',
+        shortDescription: 'Net Wt. 600g | 4 Pieces',
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].heroBanner,
+        galleryImages: [
+            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].heroBanner
+        ],
+        price: 900,
+        weightGrams: 600,
+        weightLabel: 'Net Wt. 600g | 4 Pieces',
+        piecesCount: 4,
+        stockQuantity: 32,
+        lowStockThreshold: 8,
+        isFeatured: false,
+        isBestSeller: false,
+        isNewArrival: true,
+        rating: 4.7,
+        reviewCount: 19,
+        ingredients: [
+            'Pastry Crust (Flour, Butter)',
+            'Diced Chicken Tikka',
+            'Mozzarella & Cheddar',
+            'Tomato Herb Sauce'
+        ],
+        nutritionalInfo: {
+            servingSize: '1 Quiche (150g)',
+            calories: 280,
+            proteinG: 12.0,
+            totalFatG: 14.0,
+            carbsG: 26.0,
+            sodiumMg: 340
+        },
+        cookingMethods: [
+            {
+                method: 'Bake',
+                time: '10-12 mins',
+                temperature: '190°C',
+                instructions: 'Bake in preheated oven until cheese is bubbling.'
+            },
+            {
+                method: 'Air Fry',
+                time: '7-9 mins',
+                temperature: '180°C',
+                instructions: 'Air fry until crust is crispy.'
+            }
+        ],
+        storageInstructions: 'Keep frozen at -18°C.',
+        tags: [
+            'pizza',
+            'quiche',
+            'cheese',
+            'snack'
+        ],
+        seoTitle: 'Quiche Pizza 600g (4 Pieces) | Mr. Frozen',
+        seoDescription: 'Quiche Pizza 600g for Rs. 900 (4 pieces).',
+        createdAt: '2026-02-01T00:00:00Z'
+    },
+    {
+        id: 'prod-13',
+        slug: 'tikka-topping-700g',
+        sku: 'MF-TT-700',
+        name: 'Tikka Topping',
+        tagline: 'Tandoori-spiced cooked chicken tikka chunks for pizzas, sandwiches, pastas & wraps',
+        category: 'pizza-toppings',
+        categoryName: 'Pizza & Toppings',
+        description: 'Fully cooked, tender chicken tikka chunks seasoned with classic tandoori masala. Ready to scatter on pizzas, pastas, and pita wraps.',
+        shortDescription: 'Net Wt. 700g',
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenSeekhKebab,
+        galleryImages: [
+            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenSeekhKebab
+        ],
+        price: 1200,
+        weightGrams: 700,
+        weightLabel: 'Net Wt. 700g',
+        piecesCount: 1,
+        stockQuantity: 48,
+        lowStockThreshold: 10,
+        isFeatured: true,
+        isBestSeller: true,
+        isNewArrival: false,
+        rating: 4.9,
+        reviewCount: 36,
+        ingredients: [
+            'Boneless Chicken Breast Chunks (80%)',
+            'Tandoori Tikka Masala',
+            'Ginger Garlic, Lemon',
+            'Yogurt & Salt'
+        ],
+        nutritionalInfo: {
+            servingSize: '100g',
+            calories: 140,
+            proteinG: 22.0,
+            totalFatG: 4.0,
+            carbsG: 2.0,
+            sodiumMg: 260
+        },
+        cookingMethods: [
+            {
+                method: 'Pan Fry',
+                time: '3-4 mins',
+                instructions: 'Heat on skillet with a splash of oil or butter.'
+            },
+            {
+                method: 'Bake',
+                time: '5 mins',
+                instructions: 'Warm directly as pizza topping.'
+            }
+        ],
+        storageInstructions: 'Keep frozen at -18°C.',
+        tags: [
+            'tikka-topping',
+            'pizza-topping',
+            'chicken-tikka'
+        ],
+        seoTitle: 'Tikka Topping 700g | Mr. Frozen',
+        seoDescription: 'Tandoori Tikka Topping 700g for Rs. 1,200.',
+        createdAt: '2026-01-26T00:00:00Z'
+    },
+    {
+        id: 'prod-14',
+        slug: 'fajita-topping-650g',
+        sku: 'MF-FT-650',
+        name: 'Fajita Topping',
+        tagline: 'Zesty Mexican-style seasoned chicken strips with paprika, lime, and crushed oregano',
+        category: 'pizza-toppings',
+        categoryName: 'Pizza & Toppings',
+        description: 'Flavor-packed cooked chicken fajita strips. Elevate homemade quesadillas, pizzas, sub-rolls, and rice bowls in minutes.',
+        shortDescription: 'Net Wt. 650g',
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenNuggets,
+        galleryImages: [
+            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenNuggets
+        ],
+        price: 1400,
+        weightGrams: 650,
+        weightLabel: 'Net Wt. 650g',
+        piecesCount: 1,
+        stockQuantity: 35,
+        lowStockThreshold: 8,
+        isFeatured: false,
+        isBestSeller: true,
+        isNewArrival: true,
+        rating: 4.8,
+        reviewCount: 29,
+        ingredients: [
+            'Chicken Breast Strips (82%)',
+            'Fajita Spices (Paprika, Cumin, Oregano)',
+            'Lime Juice, Garlic, Pepper',
+            'Salt'
+        ],
+        nutritionalInfo: {
+            servingSize: '100g',
+            calories: 135,
+            proteinG: 21.5,
+            totalFatG: 3.5,
+            carbsG: 2.5,
+            sodiumMg: 240
+        },
+        cookingMethods: [
+            {
+                method: 'Pan Fry',
+                time: '3-4 mins',
+                instructions: 'Sauté briefly in skillet with bell peppers and onions.'
+            }
+        ],
+        storageInstructions: 'Keep frozen at -18°C.',
+        tags: [
+            'fajita',
+            'topping',
+            'mexican-style',
+            'chicken'
+        ],
+        seoTitle: 'Fajita Topping 650g | Mr. Frozen',
+        seoDescription: 'Zesty Chicken Fajita Topping 650g for Rs. 1,400.',
+        createdAt: '2026-01-30T00:00:00Z'
+    },
+    {
+        id: 'prod-15',
+        slug: 'chicken-galawati-kabab-550g',
+        sku: 'MF-CGK-550',
+        name: 'Chicken Galawati Kabab',
+        tagline: 'Lucknowi-style ultra-tender chicken kababs infused with aromatic saffron notes and rose petals',
+        category: 'kebabs',
+        categoryName: 'Kababs Range',
+        description: 'Renowned for their royal tenderness. Delicate minced chicken scented with nutmeg, mace, kewra, and roasted spices that melts on your tongue.',
+        shortDescription: 'Net Wt. 550g',
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenShamiKebab,
+        galleryImages: [
+            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenShamiKebab
+        ],
+        price: 1200,
+        weightGrams: 550,
+        weightLabel: 'Net Wt. 550g',
+        piecesCount: 15,
+        stockQuantity: 30,
+        lowStockThreshold: 6,
+        isFeatured: true,
+        isBestSeller: false,
+        isNewArrival: true,
+        rating: 4.9,
+        reviewCount: 24,
+        ingredients: [
+            'Finely Minced Chicken (76%)',
+            'Lucknowi Spice Potli (Mace, Nutmeg, Cardamom)',
+            'Fried Onion Paste, Ghee',
+            'Pure Salt'
+        ],
+        nutritionalInfo: {
+            servingSize: '1 Kabab (36g)',
+            calories: 72,
+            proteinG: 6.5,
+            totalFatG: 3.8,
+            carbsG: 1.5,
+            sodiumMg: 170
+        },
+        cookingMethods: [
+            {
+                method: 'Pan Fry',
+                time: '3-4 mins',
+                instructions: 'Gently fry in clarified butter (ghee) on medium heat.'
+            }
+        ],
+        storageInstructions: 'Keep frozen at -18°C.',
+        tags: [
+            'galawati',
+            'lucknowi',
+            'kabab',
+            'chicken'
+        ],
+        seoTitle: 'Chicken Galawati Kabab 550g | Mr. Frozen',
+        seoDescription: 'Royal Chicken Galawati Kababs 550g for Rs. 1,200. Melt in mouth texture.',
+        createdAt: '2026-02-04T00:00:00Z'
+    }
+];
+const INITIAL_DEALS = [
+    {
+        id: 'deal-01',
+        dealNumber: 1,
+        title: 'Nuggets, Tender & Malai Boti Combo',
+        slug: 'deal-1-nuggets-tender-malai-boti',
+        sku: 'MF-DEAL-01',
+        items: [
+            {
+                name: 'Chicken Nuggets (1000g)',
+                price: 1300
+            },
+            {
+                name: 'Hot Tender (780g)',
+                price: 1300
+            },
+            {
+                name: 'Malai Boti (500g)',
+                price: 900
+            }
+        ],
+        originalTotal: 3500,
+        dealPrice: 2999,
+        savings: 501,
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenNuggets,
+        description: 'Crispy nuggets, spicy hot tenders, and creamy malai boti. Perfect feast bundle!',
+        badge: 'Save Rs. 501',
+        stockQuantity: 25
+    },
+    {
+        id: 'deal-02',
+        dealNumber: 2,
+        title: 'Shami, Seekh & Tikka Topping Bundle',
+        slug: 'deal-2-shami-seekh-tikka-topping',
+        sku: 'MF-DEAL-02',
+        items: [
+            {
+                name: 'Chicken Shami Kabab (648g)',
+                price: 1100
+            },
+            {
+                name: 'Chicken Seekh Kabab (1080g)',
+                price: 1100
+            },
+            {
+                name: 'Tikka Topping (700g)',
+                price: 1200
+            }
+        ],
+        originalTotal: 3400,
+        dealPrice: 2899,
+        savings: 501,
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenShamiKebab,
+        description: 'Authentic Shami & Seekh kababs combined with juicy tandoori chicken tikka chunks.',
+        badge: 'Save Rs. 501',
+        stockQuantity: 20
+    },
+    {
+        id: 'deal-03',
+        dealNumber: 3,
+        title: 'Wings, Beef Shami & Fajita Feast',
+        slug: 'deal-3-wings-beef-shami-fajita',
+        sku: 'MF-DEAL-03',
+        items: [
+            {
+                name: 'Big Bird Wings (850g)',
+                price: 1200
+            },
+            {
+                name: 'Beef Shami Kabab (648g)',
+                price: 1300
+            },
+            {
+                name: 'Fajita Topping (650g)',
+                price: 1400
+            }
+        ],
+        originalTotal: 3900,
+        dealPrice: 3299,
+        savings: 601,
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].heroBanner,
+        description: 'Jumbo wings, traditional beef shami kababs, and zesty Mexican fajita topping.',
+        badge: 'Save Rs. 601',
+        stockQuantity: 18
+    },
+    {
+        id: 'deal-04',
+        dealNumber: 4,
+        title: 'Nuggets, Tikka & Tender Pop Snack Pack',
+        slug: 'deal-4-nuggets-tikka-tender-pop',
+        sku: 'MF-DEAL-04',
+        items: [
+            {
+                name: 'Chicken Nuggets (1000g)',
+                price: 1300
+            },
+            {
+                name: 'Tikka Topping (700g)',
+                price: 1200
+            },
+            {
+                name: 'Tender Pop (780g)',
+                price: 1100
+            }
+        ],
+        originalTotal: 3600,
+        dealPrice: 2999,
+        savings: 601,
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenTenderPops,
+        description: 'The ultimate party snack bundle! Crunchy nuggets, bite-sized poppers & savory tikka.',
+        badge: 'Save Rs. 601',
+        stockQuantity: 22
+    },
+    {
+        id: 'deal-05',
+        dealNumber: 5,
+        title: 'Burger Patty, Pizza & Malai Boti Delight',
+        slug: 'deal-5-patty-pizza-malai-boti',
+        sku: 'MF-DEAL-05',
+        items: [
+            {
+                name: 'Burger Patty (850g)',
+                price: 1300
+            },
+            {
+                name: 'Quiche Pizza (600g)',
+                price: 900
+            },
+            {
+                name: 'Malai Boti (500g)',
+                price: 900
+            }
+        ],
+        originalTotal: 3100,
+        dealPrice: 2499,
+        savings: 601,
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenSeekhKebab,
+        description: 'Family fast food night made effortless with patties, quiche pizza, and creamy malai boti.',
+        badge: 'Save Rs. 601',
+        stockQuantity: 15
+    },
+    {
+        id: 'deal-06',
+        dealNumber: 6,
+        title: 'Royal Kabab Trio (Seekh, Shami & Beef)',
+        slug: 'deal-6-kabab-trio',
+        sku: 'MF-DEAL-06',
+        items: [
+            {
+                name: 'Chicken Seekh Kabab (1080g)',
+                price: 1100
+            },
+            {
+                name: 'Chicken Shami Kabab (648g)',
+                price: 1100
+            },
+            {
+                name: 'Beef Shami Kabab (648g)',
+                price: 1300
+            }
+        ],
+        originalTotal: 3500,
+        dealPrice: 2899,
+        savings: 601,
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenShamiKebab,
+        description: 'The ultimate kabab lovers pack: Seekh skewers, chicken shami & rich beef shami.',
+        badge: 'Save Rs. 601',
+        stockQuantity: 24
+    },
+    {
+        id: 'deal-07',
+        dealNumber: 7,
+        title: 'Galawati, Fajita & Hot Tender Platter',
+        slug: 'deal-7-galawati-fajita-hot-tender',
+        sku: 'MF-DEAL-07',
+        items: [
+            {
+                name: 'Chicken Galawati Kabab (550g)',
+                price: 1200
+            },
+            {
+                name: 'Fajita Topping (650g)',
+                price: 1400
+            },
+            {
+                name: 'Hot Tender (780g)',
+                price: 1300
+            }
+        ],
+        originalTotal: 3900,
+        dealPrice: 3199,
+        savings: 701,
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].products.chickenTenderPops,
+        description: 'Melt-in-mouth Lucknowi Galawati, crispy hot tenders, and savory fajita chicken.',
+        badge: 'Save Rs. 701',
+        stockQuantity: 16
+    },
+    {
+        id: 'deal-08',
+        dealNumber: 8,
+        title: 'Wings, Nuggets & Tikka Mega Saver',
+        slug: 'deal-8-wings-nuggets-tikka',
+        sku: 'MF-DEAL-08',
+        items: [
+            {
+                name: 'Big Bird Wings (850g)',
+                price: 1200
+            },
+            {
+                name: 'Chicken Nuggets (1000g)',
+                price: 1300
+            },
+            {
+                name: 'Tikka Topping (700g)',
+                price: 1200
+            }
+        ],
+        originalTotal: 3700,
+        dealPrice: 2999,
+        savings: 701,
+        image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["brandImages"].heroBanner,
+        description: 'Big Bird wings, 1kg chicken nuggets, and versatile chicken tikka topping.',
+        badge: 'Save Rs. 701',
+        stockQuantity: 30
     }
 ];
 const INITIAL_COUPONS = [
@@ -1146,42 +1896,42 @@ const INITIAL_SETTINGS = {
             estimatedHours: 'Next-day insulated express'
         }
     ],
-    bannerAnnouncement: '❄️ Cold-chain temperature controlled delivery across major cities | Free shipping on orders over PKR 2,500!',
+    bannerAnnouncement: '🔥 EXCLUSIVE MEGA DEALS LIVE! Save up to Rs. 701 on Family Combos | Free Cold Delivery over Rs. 2,500',
     isStoreOpen: true
 };
 const INITIAL_REVIEWS = [
     {
         id: 'rev-01',
-        productId: 'prod-shami-chicken-01',
-        productName: 'Premium Chicken Shami Kebab',
+        productId: 'prod-02',
+        productName: 'Chicken Shami Kabab',
         customerName: 'Fatima Zafar (Karachi)',
         rating: 5,
         title: 'Just like homemade dadi ki recipe!',
-        comment: 'Authentic coarse chicken texture and not overly spiced. Frys cleanly without breaking apart. My kids love it in their school burger buns.',
+        comment: 'Authentic coarse chicken texture and not overly spiced. Frys cleanly without breaking apart. 18 pieces for Rs. 1,100 is great value.',
         isVerifiedBuyer: true,
         isApproved: true,
         createdAt: '2026-02-18T14:30:00Z'
     },
     {
         id: 'rev-02',
-        productId: 'prod-seekh-chicken-02',
-        productName: 'Smoky Chicken Seekh Kebab',
+        productId: 'prod-08',
+        productName: 'Chicken Seekh Kabab',
         customerName: 'Muhammad Bilal (Lahore)',
         rating: 5,
         title: 'Smoky aroma is spot on',
-        comment: 'Cooked on a cast iron pan with a touch of butter. Tender and juicy with a great charcoal flavor. Highly recommend Mr. Frozen.',
+        comment: 'The 1080g pack gives so many seekh kababs! Cooked on a cast iron pan with a touch of butter. Smoky and juicy.',
         isVerifiedBuyer: true,
         isApproved: true,
         createdAt: '2026-02-22T19:15:00Z'
     },
     {
         id: 'rev-03',
-        productId: 'prod-nuggets-chicken-03',
-        productName: 'Crispy Chicken Nuggets',
+        productId: 'prod-01',
+        productName: 'Chicken Nuggets',
         customerName: 'Ayesha Tariq (Islamabad)',
         rating: 5,
-        title: 'Real chicken inside, not processed sponge',
-        comment: 'You can actually see the fibrous chicken breast. The panko crunch stays crisp even in air fryer with minimal oil.',
+        title: 'Real chicken breast inside, 1kg pack is awesome',
+        comment: 'Over 44 pieces in a 1000g pack. My kids love it in air fryer.',
         isVerifiedBuyer: true,
         isApproved: true,
         createdAt: '2026-03-01T11:00:00Z'
@@ -1609,15 +2359,16 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$seedData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/seedData.ts [app-ssr] (ecmascript)");
 ;
 const STORAGE_KEYS = {
-    PRODUCTS: 'mf_products_v1',
-    CATEGORIES: 'mf_categories_v1',
-    ORDERS: 'mf_orders_v1',
-    COUPONS: 'mf_coupons_v1',
-    REVIEWS: 'mf_reviews_v1',
-    SETTINGS: 'mf_settings_v1',
-    USER: 'mf_current_user_v1',
-    WISHLIST: 'mf_wishlist_v1',
-    CART: 'mf_cart_v1'
+    PRODUCTS: 'mf_products_v2',
+    DEALS: 'mf_deals_v1',
+    CATEGORIES: 'mf_categories_v2',
+    ORDERS: 'mf_orders_v2',
+    COUPONS: 'mf_coupons_v2',
+    REVIEWS: 'mf_reviews_v2',
+    SETTINGS: 'mf_settings_v2',
+    USER: 'mf_current_user_v2',
+    WISHLIST: 'mf_wishlist_v2',
+    CART: 'mf_cart_v2'
 };
 const DEMO_ADMIN_USER = {
     id: 'usr-admin-01',
@@ -1664,29 +2415,29 @@ const DEMO_ORDERS = [
         },
         items: [
             {
-                productId: 'prod-shami-chicken-01',
-                productName: 'Premium Chicken Shami Kebab',
-                sku: 'MF-CSK-750',
-                unitPrice: 850,
+                productId: 'prod-02',
+                productName: 'Chicken Shami Kabab',
+                sku: 'MF-CSK-648',
+                unitPrice: 1100,
                 quantity: 2,
-                totalPrice: 1700,
-                image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$seedData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["INITIAL_PRODUCTS"][0].image
+                totalPrice: 2200,
+                image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$seedData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["INITIAL_PRODUCTS"][1].image
             },
             {
-                productId: 'prod-nuggets-chicken-03',
-                productName: 'Crispy Chicken Nuggets',
-                sku: 'MF-NUG-800',
-                unitPrice: 1190,
+                productId: 'prod-01',
+                productName: 'Chicken Nuggets (1000g)',
+                sku: 'MF-NUG-1000',
+                unitPrice: 1300,
                 quantity: 1,
-                totalPrice: 1190,
-                image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$seedData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["INITIAL_PRODUCTS"][2].image
+                totalPrice: 1300,
+                image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$seedData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["INITIAL_PRODUCTS"][0].image
             }
         ],
-        subtotal: 2890,
+        subtotal: 3500,
         deliveryFee: 0,
-        discountAmount: 289,
+        discountAmount: 350,
         couponCode: 'FROZENFRESH10',
-        grandTotal: 2601,
+        grandTotal: 3150,
         paymentMethod: 'cod',
         paymentStatus: 'Unpaid',
         orderStatus: 'Out for Delivery',
@@ -1714,61 +2465,6 @@ const DEMO_ORDERS = [
         ],
         createdAt: '2026-03-05T09:00:00Z',
         estimatedDeliveryDate: '2026-03-05'
-    },
-    {
-        id: 'ord-1002',
-        orderNumber: 'MF-78422',
-        customer: {
-            id: 'cust-2',
-            fullName: 'Zainab Ahmed',
-            email: 'zainab.a@outlook.com',
-            phoneNumber: '0333-8765432'
-        },
-        shippingAddress: {
-            fullName: 'Zainab Ahmed',
-            phoneNumber: '0333-8765432',
-            email: 'zainab.a@outlook.com',
-            streetAddress: 'Flat 402, Al-Razi Heights, Gulberg III',
-            area: 'Gulberg III',
-            city: 'Lahore',
-            province: 'Punjab',
-            postalCode: '54000'
-        },
-        items: [
-            {
-                productId: 'prod-seekh-chicken-02',
-                productName: 'Smoky Chicken Seekh Kebab',
-                sku: 'MF-SEEKH-600',
-                unitPrice: 990,
-                quantity: 2,
-                totalPrice: 1980,
-                image: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$seedData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["INITIAL_PRODUCTS"][1].image
-            }
-        ],
-        subtotal: 1980,
-        deliveryFee: 200,
-        discountAmount: 0,
-        grandTotal: 2180,
-        paymentMethod: 'bank_transfer',
-        paymentStatus: 'Paid',
-        orderStatus: 'Delivered',
-        trackingUpdates: [
-            {
-                status: 'Confirmed',
-                timestamp: '2026-03-04T14:00:00Z'
-            },
-            {
-                status: 'Shipped',
-                timestamp: '2026-03-04T16:00:00Z'
-            },
-            {
-                status: 'Delivered',
-                timestamp: '2026-03-04T18:30:00Z',
-                notes: 'Received by customer with signature'
-            }
-        ],
-        createdAt: '2026-03-04T13:45:00Z',
-        estimatedDeliveryDate: '2026-03-04'
     }
 ];
 class DatabaseService {
@@ -1788,6 +2484,83 @@ class DatabaseService {
             console.warn('Storage error:', e);
         }
     }
+    // Deals
+    getDeals() {
+        return this.get(STORAGE_KEYS.DEALS, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$seedData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["INITIAL_DEALS"]);
+    }
+    saveDeals(deals) {
+        this.set(STORAGE_KEYS.DEALS, deals);
+    }
+    getDealById(id) {
+        return this.getDeals().find((d)=>d.id === id || d.slug === id);
+    }
+    // Convert deal to a Product format so it can be added to the Cart cleanly
+    convertDealToProduct(deal) {
+        const itemNames = deal.items.map((i)=>`${i.name} (Rs. ${i.price})`).join(' + ');
+        return {
+            id: deal.id,
+            slug: deal.slug,
+            sku: deal.sku,
+            name: `Deal #${deal.dealNumber}: ${deal.title}`,
+            tagline: itemNames,
+            category: 'deals',
+            categoryName: 'Mega Deals',
+            description: `${deal.description} Includes: ${itemNames}. Save Rs. ${deal.savings.toLocaleString()}!`,
+            shortDescription: itemNames,
+            image: deal.image,
+            galleryImages: [
+                deal.image
+            ],
+            price: deal.originalTotal,
+            salePrice: deal.dealPrice,
+            discountPercentage: Math.round(deal.savings / deal.originalTotal * 100),
+            weightGrams: 2000,
+            weightLabel: `3 Pack Combo • Save Rs. ${deal.savings}`,
+            piecesCount: 3,
+            stockQuantity: deal.stockQuantity,
+            lowStockThreshold: 5,
+            isFeatured: true,
+            isBestSeller: true,
+            isNewArrival: true,
+            rating: 5.0,
+            reviewCount: 18,
+            ingredients: deal.items.map((i)=>i.name),
+            nutritionalInfo: {
+                servingSize: 'Combo Pack',
+                calories: 450,
+                proteinG: 40,
+                totalFatG: 18,
+                carbsG: 25,
+                sodiumMg: 600
+            },
+            cookingMethods: [
+                {
+                    method: 'Air Fry',
+                    time: '8-12 mins',
+                    instructions: 'Cook items from frozen according to individual preference.'
+                },
+                {
+                    method: 'Pan Fry',
+                    time: '5-7 mins',
+                    instructions: 'Pan fry from frozen with minimal oil.'
+                }
+            ],
+            storageInstructions: 'Keep frozen at -18°C.',
+            tags: [
+                'deal',
+                'bundle',
+                'savings',
+                'combo'
+            ],
+            seoTitle: `${deal.title} - Deal #${deal.dealNumber} | Mr. Frozen`,
+            seoDescription: `Order ${deal.title} for Rs. ${deal.dealPrice.toLocaleString()}. Save Rs. ${deal.savings.toLocaleString()}.`,
+            createdAt: new Date().toISOString(),
+            isDeal: true,
+            dealItems: deal.items,
+            originalTotal: deal.originalTotal,
+            savings: deal.savings
+        };
+    }
     // Products
     getProducts() {
         return this.get(STORAGE_KEYS.PRODUCTS, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$seedData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["INITIAL_PRODUCTS"]);
@@ -1796,18 +2569,33 @@ class DatabaseService {
         this.set(STORAGE_KEYS.PRODUCTS, products);
     }
     getProductById(id) {
-        return this.getProducts().find((p)=>p.id === id || p.slug === id);
+        const prods = this.getProducts();
+        const foundProd = prods.find((p)=>p.id === id || p.slug === id);
+        if (foundProd) return foundProd;
+        // Check if it's a deal
+        const deal = this.getDealById(id);
+        if (deal) return this.convertDealToProduct(deal);
+        return undefined;
     }
     updateProductStock(productId, quantityToDeduct) {
         const products = this.getProducts();
         const index = products.findIndex((p)=>p.id === productId);
-        if (index === -1) return false;
-        if (products[index].stockQuantity < quantityToDeduct) {
-            return false; // insufficient stock
+        if (index >= 0) {
+            if (products[index].stockQuantity < quantityToDeduct) return false;
+            products[index].stockQuantity -= quantityToDeduct;
+            this.saveProducts(products);
+            return true;
         }
-        products[index].stockQuantity -= quantityToDeduct;
-        this.saveProducts(products);
-        return true;
+        // Check deals
+        const deals = this.getDeals();
+        const dealIndex = deals.findIndex((d)=>d.id === productId);
+        if (dealIndex >= 0) {
+            if (deals[dealIndex].stockQuantity < quantityToDeduct) return false;
+            deals[dealIndex].stockQuantity -= quantityToDeduct;
+            this.saveDeals(deals);
+            return true;
+        }
+        return false;
     }
     saveProduct(product) {
         const products = this.getProducts();
@@ -1881,6 +2669,7 @@ class DatabaseService {
     // Reset demo data
     resetToDemo() {
         this.set(STORAGE_KEYS.PRODUCTS, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$seedData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["INITIAL_PRODUCTS"]);
+        this.set(STORAGE_KEYS.DEALS, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$seedData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["INITIAL_DEALS"]);
         this.set(STORAGE_KEYS.CATEGORIES, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$seedData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["INITIAL_CATEGORIES"]);
         this.set(STORAGE_KEYS.ORDERS, DEMO_ORDERS);
         this.set(STORAGE_KEYS.COUPONS, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$seedData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["INITIAL_COUPONS"]);

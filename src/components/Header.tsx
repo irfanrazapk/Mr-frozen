@@ -100,6 +100,16 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAuth, onOpenCart }) => {
               Home
             </button>
             <button
+              onClick={() => navigateTo('deals')}
+              className={`flex items-center gap-1.5 transition-colors cursor-pointer py-1 border-b-2 ${
+                currentView === 'deals' ? 'border-brand-primary text-brand-primary font-bold' : 'border-transparent text-brand-leaf font-bold hover:text-brand-primary'
+              }`}
+            >
+              <span className="w-2 h-2 rounded-full bg-amber-500 animate-ping" />
+              <span>Mega Deals</span>
+              <span className="bg-amber-100 text-amber-800 text-[10px] font-extrabold px-1.5 py-0.2 rounded-sm uppercase">Hot</span>
+            </button>
+            <button
               onClick={() => navigateTo('shop')}
               className={`hover:text-brand-primary transition-colors cursor-pointer py-1 border-b-2 ${
                 currentView === 'shop' ? 'border-brand-primary text-brand-primary' : 'border-transparent text-brand-dark/80'
@@ -107,18 +117,18 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAuth, onOpenCart }) => {
             >
               All Products
             </button>
-            <button
+            {/* <button
               onClick={() => navigateTo('shop', 'kebabs')}
               className="hover:text-brand-primary transition-colors cursor-pointer py-1 text-brand-dark/80"
             >
               Shami & Seekh
-            </button>
-            <button
+            </button> */}
+            {/* <button
               onClick={() => navigateTo('shop', 'nuggets')}
               className="hover:text-brand-primary transition-colors cursor-pointer py-1 text-brand-dark/80"
             >
               Nuggets & Pops
-            </button>
+            </button> */}
             <button
               onClick={() => navigateTo('order-tracking')}
               className={`hover:text-brand-primary transition-colors cursor-pointer py-1 border-b-2 ${
@@ -252,6 +262,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAuth, onOpenCart }) => {
               className="flex items-center justify-between py-2.5 px-3 rounded-lg hover:bg-brand-light/40 text-left"
             >
               <span>Home</span>
+            </button>
+            <button
+              onClick={() => navigateTo('deals')}
+              className="flex items-center justify-between py-2.5 px-3 rounded-lg bg-amber-50 text-amber-900 font-bold text-left border border-amber-200"
+            >
+              <span className="flex items-center gap-2">
+                <span>🔥 Mega Deals (Save up to Rs. 701)</span>
+              </span>
+              <span className="text-[10px] bg-brand-leaf text-white font-extrabold px-1.5 py-0.5 rounded-sm">HOT</span>
             </button>
             <button
               onClick={() => navigateTo('shop')}

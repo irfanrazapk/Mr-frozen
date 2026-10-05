@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, Flame, Sparkles } from 'lucide-react';
 import { HeroSection } from './HeroSection';
 import { CategoryGrid } from './CategoryGrid';
+import { DealsSection } from './DealsSection';
 import { ProductCard } from './ProductCard';
 import { WhyChooseUs } from './WhyChooseUs';
 import { PromoBanner } from './PromoBanner';
@@ -24,7 +25,15 @@ export const HomeView: React.FC = () => {
       {/* 2. Shop by Category */}
       <CategoryGrid />
 
-      {/* 3. Featured Ready-to-Cook Collection */}
+      {/* 3. EXCLUSIVE DEALS SECTION (Directly Above Products as requested) */}
+      <DealsSection 
+        title="Exclusive Mega Deals"
+        subtitle="Combo family bundles crafted for maximum variety and flavor. Save up to Rs. 701 on every pack!"
+        showViewAllButton={true}
+        onViewAllClick={() => setCurrentView('deals')}
+      />
+
+      {/* 4. Featured Ready-to-Cook Collection */}
       <section className="py-16 bg-surface-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -59,13 +68,13 @@ export const HomeView: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. Why Choose Mr. Frozen */}
+      {/* 5. Why Choose Mr. Frozen */}
       <WhyChooseUs />
 
-      {/* 5. Mid-Page Promo Banner */}
+      {/* 6. Mid-Page Promo Banner */}
       <PromoBanner />
 
-      {/* 6. Best Sellers Section */}
+      {/* 7. Best Sellers Section */}
       <section className="py-16 bg-surface-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -87,7 +96,7 @@ export const HomeView: React.FC = () => {
               }}
               className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-primary hover:text-brand-secondary transition-colors cursor-pointer"
             >
-              <span>View Kebab Range</span>
+              <span>View Kabab Range</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
@@ -101,7 +110,7 @@ export const HomeView: React.FC = () => {
         </div>
       </section>
 
-      {/* 7. Short Brand Story Callout */}
+      {/* 8. Short Brand Story Callout */}
       <section className="py-16 bg-white border-y border-brand-main">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -110,7 +119,7 @@ export const HomeView: React.FC = () => {
               <div className="rounded-3xl overflow-hidden border border-brand-main shadow-md">
                 <img
                   src={brandImages.products.chickenShamiKebab}
-                  alt="Authentic Mr. Frozen Shami Kebab"
+                  alt="Authentic Mr. Frozen Shami Kabab"
                   className="w-full h-80 object-cover"
                 />
               </div>
@@ -124,7 +133,7 @@ export const HomeView: React.FC = () => {
                 Pure Chicken. Real Herbs. No Compromises.
               </h2>
               <p className="text-sm text-brand-muted leading-relaxed">
-                At Mr. Frozen, we hold the traditional Pakistani dining table sacred. We don't use mechanically separated poultry, textured soy fillers, or chemical preservatives. Every single kebab, nugget, and tender pop is prepared using prime meat, freshly minced herbs, and aromatic whole spices before being shock-frozen at -18°C.
+                At Mr. Frozen, we hold the traditional Pakistani dining table sacred. We don't use mechanically separated poultry, textured soy fillers, or chemical preservatives. Every single kabab, nugget, and tender pop is prepared using prime meat, freshly minced herbs, and aromatic whole spices before being shock-frozen at -18°C.
               </p>
               <div className="pt-2">
                 <button
@@ -140,7 +149,7 @@ export const HomeView: React.FC = () => {
         </div>
       </section>
 
-      {/* 8. Customer Reviews & Testimonials */}
+      {/* 9. Customer Reviews & Testimonials */}
       <CustomerReviewsSection />
 
     </div>
