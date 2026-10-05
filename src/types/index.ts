@@ -2,10 +2,13 @@ export type ProductCategory =
   | 'kebabs' 
   | 'nuggets' 
   | 'tender-pops' 
+  | 'wings-bites' 
+  | 'pizza-toppings' 
+  | 'patties-boti' 
   | 'parathas' 
-  | 'snacks' 
   | 'ready-to-cook' 
-  | 'family-packs';
+  | 'family-packs'
+  | 'deals';
 
 export interface CookingMethod {
   method: 'Deep Fry' | 'Pan Fry' | 'Air Fry' | 'Bake' | 'Grill';
@@ -39,7 +42,7 @@ export interface Product {
   salePrice?: number;
   discountPercentage?: number;
   weightGrams: number;
-  weightLabel: string; // e.g. "750g / 18-20 pcs"
+  weightLabel: string; // e.g. "1000g | 43~45 Pieces"
   piecesCount: number;
   stockQuantity: number;
   lowStockThreshold: number;
@@ -56,6 +59,31 @@ export interface Product {
   seoTitle: string;
   seoDescription: string;
   createdAt: string;
+  isDeal?: boolean;
+  dealItems?: { name: string; price: number }[];
+  originalTotal?: number;
+  savings?: number;
+}
+
+export interface DealItemComponent {
+  name: string;
+  price: number;
+}
+
+export interface DealBundle {
+  id: string;
+  dealNumber: number;
+  title: string;
+  slug: string;
+  sku: string;
+  items: DealItemComponent[];
+  originalTotal: number;
+  dealPrice: number;
+  savings: number;
+  image: string;
+  description: string;
+  badge?: string;
+  stockQuantity: number;
 }
 
 export interface CategoryItem {
@@ -180,7 +208,7 @@ export interface SiteSettings {
   whatsappNumber: string;
   supportEmail: string;
   defaultDeliveryFee: number;
-  freeDeliveryThreshold: number; // e.g. Free delivery on orders over PKR 2,500
+  freeDeliveryThreshold: number;
   supportedCities: {
     name: string;
     deliveryFee: number;

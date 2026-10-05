@@ -1,0 +1,3 @@
+module.exports=[62109,a=>{a.v("/_next/static/media/hero_frozen_feast_1791189764564.1levhuywyt-m5.jpg"+(globalThis.NEXT_CLIENT_ASSET_SUFFIX||""))},29454,a=>{a.v("/_next/static/media/product_chicken_nuggets_1791189802779.3--b2epk9tyyj.jpg"+(globalThis.NEXT_CLIENT_ASSET_SUFFIX||""))},95929,a=>{a.v("/_next/static/media/product_seekh_kebab_1791189813576.2f78uymrrbabg.jpg"+(globalThis.NEXT_CLIENT_ASSET_SUFFIX||""))},42111,a=>{a.v("/_next/static/media/product_shami_kebab_1791189781292.1gzgdmf0or21_.jpg"+(globalThis.NEXT_CLIENT_ASSET_SUFFIX||""))},96293,a=>{a.v("/_next/static/media/product_tender_pops_1791189826702.2u_kxt-d7290w.jpg"+(globalThis.NEXT_CLIENT_ASSET_SUFFIX||""))}];
+
+//# sourceMappingURL=src_assets_images_0pu83a4._.js.map
