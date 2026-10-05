@@ -1,0 +1,6 @@
+{
+  "name": "MR. FROZEN - Good Food • Frozen Fresh",
+  "description": "Premium Pakistani frozen food brand delivering farm-fresh, wholesome, ready-to-cook delicacies including Shami Kebabs, Seekh Kebabs, Nuggets, and Tender Pops.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

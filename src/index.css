@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-primary: #075B45;
+    --brand-primary-hover: #054836;
+    --brand-secondary: #0B6B4F;
+    --brand-secondary-hover: #08533d;
+    --brand-leaf: #54A82F;
+    --brand-leaf-hover: #469125;
+    --brand-light: #EAF5E5;
+    --surface-cream: #FAFAF5;
+    --surface-white: #FFFFFF;
+    --text-dark: #12352B;
+    --text-muted: #476358;
+    --text-subtle: #78958A;
+    --surface-card: #FFFFFF;
+    --surface-muted: #F4F7F2;
+    --border-main: #DFE8DB;
+    --border-light: #EDF2EA;
+    --accent-main: #54A82F;
+    --status-success: #1B8755;
+    --status-warning: #D97706;
+    --status-error: #DC2626;
+  }
+
+  body {
+    background-color: var(--surface-cream);
+    color: var(--text-dark);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom utility classes referencing centralized theme tokens */
+.bg-brand-primary { background-color: var(--brand-primary); }
+.bg-brand-primary-hover:hover { background-color: var(--brand-primary-hover); }
+.bg-brand-secondary { background-color: var(--brand-secondary); }
+.bg-brand-leaf { background-color: var(--brand-leaf); }
+.bg-brand-light { background-color: var(--brand-light); }
+.bg-surface-cream { background-color: var(--surface-cream); }
+.bg-surface-card { background-color: var(--surface-card); }
+.bg-surface-muted { background-color: var(--surface-muted); }
+
+.text-brand-primary { color: var(--brand-primary); }
+.text-brand-secondary { color: var(--brand-secondary); }
+.text-brand-leaf { color: var(--brand-leaf); }
+.text-brand-dark { color: var(--text-dark); }
+.text-brand-muted { color: var(--text-muted); }
+.text-brand-subtle { color: var(--text-subtle); }
+
+.border-brand-main { border-color: var(--border-main); }
+.border-brand-light { border-color: var(--border-light); }
+.border-brand-primary { border-color: var(--brand-primary); }
+.border-brand-leaf { border-color: var(--brand-leaf); }
+
+.ring-brand-primary { --tw-ring-color: var(--brand-primary); }
+.ring-brand-leaf { --tw-ring-color: var(--brand-leaf); }
+
+/* Custom scrollbar for modern FMCG look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5c1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9cad93;
+}
